@@ -141,8 +141,6 @@ function initialize()
 	let floorMaterial = new THREE.ShadowMaterial();
 	floorMaterial.opacity = 0.3;
 	let floorMesh = new THREE.Mesh( floorGeometry, floorMaterial );
-	floorMesh.rotation.x = -Math.PI/2;
-	floorMesh.receiveShadow = true;
 	sceneGroup.add( floorMesh );
 
 	
@@ -177,7 +175,6 @@ function update()
 	if ( arToolkitSource.ready !== false )
 		arToolkitContext.update( arToolkitSource.domElement );
 		
-	shadowMesh.rotation.y -= 0.01;
 }
 
 
